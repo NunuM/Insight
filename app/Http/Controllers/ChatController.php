@@ -40,7 +40,7 @@ class ChatController extends Controller {
         
         $message = [
             'text' => e($post->text),
-            'username' => Auth::user()->name,
+            'name' => Auth::user()->name,
             'avatar' => '$this->user->getAvatar()',
             'timestamp' => (time() * 1000)
         ];

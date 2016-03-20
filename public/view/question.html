@@ -1,0 +1,18 @@
+<div class="list-group">
+    <a href="" ng-click="$parent.getAnswers(data.id)"  class="list-group-item">
+        <ul class="list-inline">
+            <li class="list-group-item-heading"><h4>{{ data.user.name}}</h4></li>
+            <li class="list-group-item-text" style="float: right;"><small>In {{  data.updated_at | date:'medium' }}</small></li>
+        </ul>
+        
+        <p class="list-group-item-text">
+        <p>
+            {{data.message}}
+        </p>
+
+        <hr style="height: 5px;" />
+        <ul class="list-inline">
+            <li ng-click="$parent.toggleFormState(data)" class="list-group-item-text text-info">{{ data.answers }} Answers</li>
+        </ul>
+    </a>
+</div>

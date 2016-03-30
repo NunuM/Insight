@@ -1,4 +1,4 @@
-# Sprint planning
+# Sprint Helper tool
 
 This web application has the purpose to help the sprint artifact of the Scrum framework, in order to brief the client with questions that needs answers. Stay team in track.
 

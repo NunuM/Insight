@@ -1,6 +1,6 @@
-# Sprint Helper tool
+# Sprint Tool
 
-This web application has the purpose to help the sprint artifact of the Scrum framework, in order to brief the client with questions that needs answers. Stay team in track.
+This web application has the purpose: Help the sprint artifact of the Scrum framework, in order to brief the client with questions that needs answers. Stay team in track.
 
 ### ---------------- ###
 

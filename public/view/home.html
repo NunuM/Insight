@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-md-12 col-xs-12" >
+        <div class="col-md-5 col-xs-12">
+            <span class="text-center"><h2 class="text-uppercase">Questions</h2></span>
+            <hr style="height: 5px;" />
+            <p><button ng-click="toggleQFormState()" class="btn glyphicon glyphicon-plus" title="Add Question" aria-hidden="true"></button></p>
+            <form ng-show="initQFormState" name="data" ng-submit="data.$valid && addQuestion(form)" novalidate>
+                <div class="form-group">
+                    <label for="TextArea">{{ 'Question' | uppercase }}:</label>
+                    <textarea class="form-control" ng-model="form.message" placeholder="All knowledge is an answer to a question. 'Gaston Bachelard'" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <hr style="height: 5px;" />
+            </form>
+            <question-info data='question' editable='false' ng-repeat="question in questions"></question-info>
+        </div>
+        <div id="fix_an" class="col-md-5 col-xs-12">
+            <span class="text-center"><h2 class="text-uppercase">Answers</h2></span>
+            <hr style="height: 5px;" />
+            <form ng-show="initAFormState" name="data" ng-submit="data.$valid && addAnswers(form)" novalidate>
+                <div class="form-group">
+                    <label for="TextArea">{{ 'Answers' | uppercase }}:</label>
+                    <textarea class="form-control" ng-model="form.message" placeholder="All knowledge is an answer to a question. 'Gaston Bachelard'" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <hr style="height: 5px;" />
+            </form>
+            <answer-info data='answer' editable='false' ng-repeat="answer in answers"></answer-info>
+        </div>
+        <div class="col-md-2 col-xs-12">
+            <span class="text-center"><h2 class="text-uppercase">Chat</h2></span>
+            <hr style="height: 5px;" />
+            <div class="media" style="background: #337AB7; border: 1px solid #bdbdbd; border-radius: 5px; padding: 5px; color: white; margin-bottom: 5px;" ng-repeat="chatMessage in chatMessages.data">
+                <div class="media-body">
+                    <h5 class="media-heading">{{ chatMessage.user.name }} wrote:</h5>
+                   -{{ chatMessage.text }}
+                </div>
+            </div>
+            <form class="form-inline" name="chat" ng-submit="chat.$valid && addChatMessage(form)" novalidate>
+                <div class="form-group">
+                    <div class="input-group">
+                        <textarea rows="1" type="text" class="form-control" ng-model="form.text"  placeholder="Your message" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-sm">Send</button>
+            </form>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <style>
+
+        .ng-invalid.ng-dirty{
+            border-color:red;
+        } 
+        .ng-valid.ng-dirty{
+            border-color:green;
+        } 
+
+        .ng-invalid .ng-invalid-required{
+            border-color:red;
+        }
+
+        .fixedOn {
+            top:0; 
+            position:fixed;
+        }
+
+
+    </style>

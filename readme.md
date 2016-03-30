@@ -1,3 +1,12 @@
+# Sprint planning
+
+This web application has the purpose to help the sprint artifact of the Scrum framework, in order to brief the client with questions that needs answers. Stay team in track.
+
+### ---------------- ###
+
+* Version 0.1
+
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

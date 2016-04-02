@@ -6,6 +6,11 @@ This web application has the purpose: Help the sprint artifact of the Scrum fram
 
 * Version 0.1
 
+[Wiki](https://github.com/NunuM/Insight/wiki)
+
+##Preview
+
+http://s8.postimg.org/6469zc9z9/image.png
 
 # Laravel PHP Framework
 

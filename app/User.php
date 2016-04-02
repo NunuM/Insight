@@ -25,6 +25,6 @@ class User extends Authenticatable
     ];
     
     public function elements() {
-        return $this->hasMany('App\Elements');
+        return $this->belongsToMany('App\Elements');
     }
 }

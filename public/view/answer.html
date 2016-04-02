@@ -1,8 +1,8 @@
 <div class="list-group">
     <a href=""  class="list-group-item">
         <ul class="list-inline">
-            <li class="list-group-item-heading"><h4>{{ data.user.name }}</h4></li>
-            <li class="list-group-item-text" style="float: right;"><small>In {{ data.updated_at }}</small></li>
+            <li class="list-group-item-heading"><h4>{{ data.element.user.name }}</h4></li>
+            <li class="list-group-item-text" style="float: right;"><small>In {{ formatDate(data.updated_at) | date }}</small></li>
         </ul>
 
         <p class="list-group-item-text">

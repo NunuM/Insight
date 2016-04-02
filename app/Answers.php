@@ -15,6 +15,10 @@ class Answers extends Model
         return $this->belongsTo('\App\Element');
     }
     
+    public function board(){
+        return $this->belongsTo('\App\Board');
+    }
+    
     public function question(){
         return $this->belongsTo('\App\Question');
     }

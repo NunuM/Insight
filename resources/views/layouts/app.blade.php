@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="insight">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,18 +47,13 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="<% url('/home') %>">Board</a></li>
                          @if (Auth::user())
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                         <li class="dropdown" ng-controller="projectController">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li ng-repeat="project in projects.data"><a href="home#/project/{{project.team.project.id}}">{{ project.team.project.description }}</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#">Create Project</a></li>
                             </ul>
                         </li>
                         @endif
@@ -71,7 +66,7 @@
                         <li><a href="<% url('/register') %>">Register</a></li>
                         @else
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 <% Auth::user()->name %> <span class="caret"></span>
                             </a>
 
@@ -98,7 +93,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="js/angular-resource.min.js"></script>
         <%-- <script src="<% elixir('js/app.js') %>"></script> --%>
-        <script src="js/app.js?v=38" /></script>
+        <script src="js/app.js?v=59" /></script>
     <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
     <!-- pusher-angular -->
     <script src="//cdn.jsdelivr.net/angular.pusher/latest/pusher-angular.min.js"></script>

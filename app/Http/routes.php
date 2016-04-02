@@ -39,7 +39,7 @@ Route::group(['middleware' => 'web'], function () {
 
     // API ROUTES ==================================  
     Route::group(array('prefix' => 'api'), function() {
-        Route::resource('question', 'QuestionController', array('only' => array('index', 'store', 'show', 'update')));
+        Route::resource('question', 'QuestionController', array('only' => array('store', 'show', 'update')));
     });
 
     // API ROUTES ==================================  
@@ -52,10 +52,21 @@ Route::group(['middleware' => 'web'], function () {
         Route::resource('user', 'UserController', array('only' => array('index')));
     });
     
-     // API ROUTES ==================================  
+    // API ROUTES ==================================  
     Route::group(array('prefix' => 'api'), function() {
         Route::resource('chat', 'ChatController', array('only' => array('index','store')));
     });
+    
+    // API ROUTES ==================================  
+    Route::group(array('prefix' => 'api'), function() {
+        Route::resource('project', 'ProjectController', array('only' => array('index','store','show')));
+    });
+    
+    // API ROUTES ==================================  
+    Route::group(array('prefix' => 'api'), function() {
+        Route::resource('board', 'BoardController', array('only' => array('index','store','show')));
+    });
+    
 
     Route::get('/home', 'HomeController@index');
 });

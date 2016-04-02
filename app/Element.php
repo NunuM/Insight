@@ -19,11 +19,15 @@ class Element extends Model {
     }
     
     public function role() {
-        return $this->hasOne('\App\Role');
+        return $this->belongsTo('\App\Role');
     }
     
     public function user() {
         return $this->belongsTo('\App\User');
+    }
+    
+    public function team() {
+        return $this->belongsTo('\App\Team');
     }
 
 }

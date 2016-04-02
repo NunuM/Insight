@@ -11,6 +11,9 @@ class Question extends Model
         'message','element_id',
     ];
     
+    public function board(){
+        return $this->belongsTo('\App\Board');
+    }
     
     public function element(){
         return $this->belongsTo('\App\Element');

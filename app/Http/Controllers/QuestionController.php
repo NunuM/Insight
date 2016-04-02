@@ -15,8 +15,8 @@ class QuestionController extends Controller {
         $this->middleware('auth');
     }
 
-    public function index() {
-        $questions = \App\Question::orderBy('created_at', 'desc')->paginate(15);
+    public function show($id) {
+        $questions = \App\Question::where('board_id', '=', $id)->paginate(15);
 
         foreach ($questions as $question) {
             $question->element->user;
@@ -25,12 +25,10 @@ class QuestionController extends Controller {
         return Response::json($questions);
     }
 
-    
-
     public function store(Request $request) {
         $post = \App\Question::create($request->all());
         $post->user;
-        
+
         return Response::json($post);
     }
 

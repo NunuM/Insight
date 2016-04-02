@@ -12,7 +12,7 @@ class Team extends Model {
     ];
 
     public function project() {
-        return $this->belongTo('\App\Team');
+        return $this->belongsTo('\App\Project');
     }
 
     public function elements() {

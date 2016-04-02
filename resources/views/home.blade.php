@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid" ng-app="insight">
+<div class="container-fluid" >
      <div ng-view></div>
 </div>
 @endsection

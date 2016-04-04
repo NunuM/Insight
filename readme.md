@@ -8,9 +8,9 @@ This web application has the purpose: Help the sprint artifact of the Scrum fram
 
 ##[Contents of Wiki](https://github.com/NunuM/Insight/wiki)
 
-####Architecture
-####USER STORIES:
-####OTHER DOCUMENTS:
+1. Architecture
+2. USER STORIES:
+3. OTHER DOCUMENTS:
 
 #####Preview
 
